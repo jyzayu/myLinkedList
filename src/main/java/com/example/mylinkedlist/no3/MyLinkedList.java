@@ -95,7 +95,7 @@ public class MyLinkedList<T> implements LinkedListIterableInterface<T>
             currentIdx++;
         }
         if (current.getNext().getNext() == null) {
-            tail = current.getNext();
+            tail = current;
         }
         current.setNext(current.getNext().getNext());
         size--;

@@ -9,6 +9,9 @@ public class MyStack<T> implements StackInterface<T> {
 
     @Override
     public T peek() {
+        if (isEmpty()) {
+            return null;
+        }
         return list.getTail();
     }
 
@@ -29,6 +32,9 @@ public class MyStack<T> implements StackInterface<T> {
 
     @Override
     public T pop() {
+        if (isEmpty()) {
+            return null;
+        }
         T data = list.getTail();
         list.delete(list.size() - 1);
         return data;
